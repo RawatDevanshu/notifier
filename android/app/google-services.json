@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "447948339380",
+    "project_id": "graphic-42885",
+    "storage_bucket": "graphic-42885.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:447948339380:android:242951630a98e13375bfe1",
+        "android_client_info": {
+          "package_name": "com.example.graphiceranotification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "447948339380-posg8pa8pgjnmbohctk03u8lhcqkd7gs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAga8rg4Q6e_XEsTQy0SoOWn6Rd7_ZzlbI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "447948339380-posg8pa8pgjnmbohctk03u8lhcqkd7gs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
