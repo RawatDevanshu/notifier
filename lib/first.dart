@@ -6,12 +6,12 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:graphiceranotification/new_screen.dart';
-import 'package:graphiceranotification/push_notification.dart';
-import 'package:graphiceranotification/sizeConfig.dart';
-import 'package:graphiceranotification/studentdashboard.dart';
+import 'package:graphiceranotification/utils/push_notification.dart';
+import 'package:graphiceranotification/utils/sizeConfig.dart';
+import 'package:graphiceranotification/screens/dashboards/student_dashboard_screen.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:graphiceranotification/localNotification.dart';
+import 'package:graphiceranotification/utils/localNotification.dart';
 import 'getFCM.dart';
 
 List<String> semester = ['1', '2', '3', '4', '5', '6', '7', '8'];

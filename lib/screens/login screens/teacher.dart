@@ -1,7 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:graphiceranotification/sizeConfig.dart';
-import 'package:graphiceranotification/studentdashboard.dart';
+import 'package:graphiceranotification/screens/dashboards/admin_dashboard_screen.dart';
+import 'package:graphiceranotification/utils/sizeConfig.dart';
+import 'package:graphiceranotification/screens/dashboards/student_dashboard_screen.dart';
+
+import '../dashboards/faculty_dashboard_screen.dart';
 
 var sec;
 var name;
@@ -95,16 +98,17 @@ class Teacher extends StatefulWidget {
 
 class _TeacherState extends State<Teacher> {
   void RegisterFaculty() async {
-    for(int i=1;i<9;i++)
-      {
-        if(temp[i]=='')continue;
-        await FirebaseFirestore.instance
-            .collection("Teachers")
-            .doc(name.toString()).collection('Semester').doc(i.toString()).set({'Sections':temp[i]});
-      }
-
-
+    for (int i = 1; i < 9; i++) {
+      if (temp[i] == '') continue;
+      await FirebaseFirestore.instance
+          .collection("Teachers")
+          .doc(name.toString())
+          .collection('Semester')
+          .doc(i.toString())
+          .set({'Sections': temp[i]});
+    }
   }
+
   @override
   void initState() {
     sem = semester[0];
@@ -401,14 +405,15 @@ class _TeacherState extends State<Teacher> {
                           onTap: () async {
                             print(name.toString().trim());
                             print(id.toString().trim());
-                            if(name.toString().trim()!=''&&id.toString().trim()!='')
-                              {
-                                RegisterFaculty();
-                                Navigator.pushReplacementNamed(
-                                    context, 'FirstScreen');
-                              }
-
-
+                            if (name.toString().trim() != '' &&
+                                id.toString().trim() != '') {
+                              RegisterFaculty();
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: ((context) =>
+                                          FacultyDashboard())));
+                            }
                           },
                           child: Material(
                             child: Card(
@@ -604,9 +609,8 @@ class _SelectState extends State<Select> {
                             }
                           });
                         },
-                        color: counter[int.parse(sem)][4] % 2 !=0
-                            ? true
-                            : false,
+                        color:
+                            counter[int.parse(sem)][4] % 2 != 0 ? true : false,
                       ),
                       SectionCard(
                         sectionName: 'F',

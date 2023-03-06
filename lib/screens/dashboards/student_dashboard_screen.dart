@@ -1,13 +1,11 @@
-
-
 import 'package:flutter/material.dart';
-import 'package:graphiceranotification/sizeConfig.dart';
+import 'package:graphiceranotification/utils/sizeConfig.dart';
 
-import 'drawer_screen.dart';
-import 'home_Screen.dart';
+import '../../../drawer_screen.dart';
+import '../home_Screen.dart';
 
 class StudentDashboard extends StatefulWidget {
-  static var id='StudentDashboard';
+  static var id = 'StudentDashboard';
   const StudentDashboard({Key? key}) : super(key: key);
 
   @override
@@ -20,12 +18,12 @@ class _StudentDashboardState extends State<StudentDashboard> {
     SizeConfig().init(context);
     return SafeArea(
         child: Scaffold(
-          body: Stack(
-            children: [
-              DrawerScreen(),
-              HomeScreen(),
-            ],
-          ),
-        ));
+      body: Stack(
+        children: [
+          DrawerScreen(),
+          HomeScreen(),
+        ],
+      ),
+    ));
   }
 }

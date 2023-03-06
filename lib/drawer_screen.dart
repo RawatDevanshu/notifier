@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'sizeConfig.dart';
+import 'utils/sizeConfig.dart';
+
+
 class DrawerScreen extends StatefulWidget {
   @override
   _DrawerScreenState createState() => _DrawerScreenState();

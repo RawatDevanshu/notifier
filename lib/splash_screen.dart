@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:graphiceranotification/first.dart';
-import 'package:graphiceranotification/options.dart';
+import 'package:graphiceranotification/screens/options.dart';
 
 class SplashScreen extends StatefulWidget {
   static var id = 'SplashScreeen';

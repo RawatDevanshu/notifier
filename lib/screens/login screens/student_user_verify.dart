@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
-import 'package:graphiceranotification/sizeConfig.dart';
-import 'package:graphiceranotification/studentdashboard.dart';
+import 'package:graphiceranotification/utils/sizeConfig.dart';
+import 'package:graphiceranotification/screens/dashboards/student_dashboard_screen.dart';
 
 class StudentVerification extends StatefulWidget {
   static var id = 'StudentVerification';

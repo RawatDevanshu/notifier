@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:graphiceranotification/first.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:graphiceranotification/options.dart';
+import 'package:graphiceranotification/screens/options.dart';
 import 'package:graphiceranotification/splash_screen.dart';
-import 'package:graphiceranotification/student_user_verify.dart';
-import 'package:graphiceranotification/studentdashboard.dart';
-import 'package:graphiceranotification/teacher.dart';
-import 'first.dart';
+import 'package:graphiceranotification/screens/login%20screens/student_user_verify.dart';
+import 'package:graphiceranotification/screens/dashboards/student_dashboard_screen.dart';
+import 'package:graphiceranotification/screens/login%20screens/teacher.dart';
+
 Future<void>  _firebaseMessagingBackgroundHandler(RemoteMessage message)async{
   print("Handling a background message ${message.messageId}");
 }

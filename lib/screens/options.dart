@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:graphiceranotification/student_user_verify.dart';
-import 'package:graphiceranotification/teacher.dart';
+import 'package:graphiceranotification/screens/login%20screens/admin_login_screen.dart';
+import 'package:graphiceranotification/screens/login%20screens/student_user_verify.dart';
+import 'package:graphiceranotification/screens/login%20screens/teacher.dart';
 import 'package:slide_to_act/slide_to_act.dart';
-import 'package:swipeable_button_view/swipeable_button_view.dart';
-import 'sizeConfig.dart';
+import '../utils/sizeConfig.dart';
 
 class Options extends StatefulWidget {
   static var id = 'Options';
@@ -46,6 +46,32 @@ class _OptionsState extends State<Options> {
             ),
           ],
         ),
+        floatingActionButton: SizedBox(
+          height: 70,
+          width: 70,
+          child: FloatingActionButton(
+              backgroundColor: Colors.white,
+              shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(15.0))),
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => const AdminLogin()));
+              },
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Icon(Icons.person, color: Colors.grey),
+                  Text(
+                    'Admin',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 10,
+                        fontFamily: 'Roboto',
+                        color: Color(0xFF000C45)),
+                  ),
+                ],
+              )),
+        ),
       ),
     );
   }
@@ -54,7 +80,8 @@ class _OptionsState extends State<Options> {
 class SelectionCard extends StatefulWidget {
   const SelectionCard({
     Key? key,
-    required this.text, required this.route,
+    required this.text,
+    required this.route,
   }) : super(key: key);
   final String text;
   final String route;
