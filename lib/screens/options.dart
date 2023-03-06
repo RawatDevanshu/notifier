@@ -54,8 +54,8 @@ class _OptionsState extends State<Options> {
               shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(15.0))),
               onPressed: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => const AdminLogin()));
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const AdminLogin()));
               },
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -95,14 +95,17 @@ bool isFinished = false;
 class _SelectionCardState extends State<SelectionCard> {
   @override
   Widget build(BuildContext context) {
+    final GlobalKey<SlideActionState> _key = GlobalKey();
     return Container(
         color: Colors.transparent,
         height: SizeConfig.safeBlockVertical * 17,
         width: SizeConfig.safeBlockHorizontal * 75,
         child: Center(
           child: SlideAction(
+            key: _key,
             onSubmit: () {
               Navigator.pushNamed(context, widget.route);
+              _key.currentState?.reset();
             },
             submittedIcon: Icon(
               Icons.check,
