@@ -403,10 +403,8 @@ class _TeacherState extends State<Teacher> {
                         width: SizeConfig.safeBlockHorizontal * 50,
                         child: InkWell(
                           onTap: () async {
-                            print(name.toString().trim());
-                            print(id.toString().trim());
-                            if (name.toString().trim() != '' &&
-                                id.toString().trim() != '') {
+                            if (name.toString().trim() != 'null' &&
+                                id.toString().trim() != 'null') {
                               RegisterFaculty();
                               Navigator.pushReplacement(
                                   context,
